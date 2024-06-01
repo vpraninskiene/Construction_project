@@ -9,7 +9,7 @@ header {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background: url(/img/jpg/wall-2.jpg);
+    background: url(../img/jpg/wall-2.jpg);
     padding: 10px;
     gap: 10px;
 
@@ -18,14 +18,14 @@ header {
       gap: 5px;
 
       .facebook {
-        background: url(/img/svg/square-facebook.svg);
+        background: url(../img/svg/square-facebook.svg);
         height: 1.2rem;
         width: 1.2rem;
         background-repeat: no-repeat;
       }
 
       .linkedin {
-        background: url(/img/svg/linkedin.svg);
+        background: url(../img/svg/linkedin.svg);
         height: 1.15rem;
         width: 1.15rem;
         background-repeat: no-repeat;
@@ -57,12 +57,12 @@ header {
     }
 
     .contacts .phone-icon {
-      background: url(/img/svg/phone-solid.svg);
+      background: url(../img/svg/phone-solid.svg);
       background-repeat: no-repeat;
       background-size: cover;
     }
     .contacts .envelope-icon {
-      background: url(/img/svg//envelope-solid.svg);
+      background: url(../img/svg/envelope-solid.svg);
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -86,7 +86,7 @@ header {
       }
 
       .logo-img {
-        background: url(/img/svg/bricks_7007773.png);
+        background: url(../img/svg/bricks_7007773.png);
         background-size: cover;
         background-repeat: no-repeat;
         width: 50px;
