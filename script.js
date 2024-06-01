@@ -90,33 +90,33 @@ for (let i = 0; i < cards.length; i++) {
 // services modal
 
 const servicesOne = [
-  "lorem ispum dolor lorem ispum",
-  "lorem ispum dolor lorem ispum",
-  "lorem ispum dolor lorem ispum",
-  "lorem ispum dolor lorem ispum",
-  "lorem ispum dolor lorem ispum",
+  "lorem ispum dolor lorem",
+  "lorem ispum dolor lorem",
+  "lorem ispum dolor lorem",
+  "lorem ispum dolor lorem",
+  "lorem ispum dolor lorem",
 ];
 
 const servicesTwo = [
-  "dolor lorem lorem lorem ispum",
-  "ispum dolor lorem lorem ispum",
-  "ispum dolor lorem lorem ispum",
-  "ispum dolor lorem lorem ispum",
-  "ispum dolor lorem lorem ispum",
+  "dolor lorem lorem lorem",
+  "ispum dolor lorem lorem",
+  "ispum dolor lorem lorem",
+  "ispum dolor lorem lorem",
+  "ispum dolor lorem lorem",
 ];
 const servicesThree = [
-  "lorem lorem lorem lorem ispum",
-  "ispum dolor lorem lorem ispum",
-  "ispum dolor lorem lorem ispum",
-  "ispum dolor lorem lorem ispum",
-  "ispum dolor lorem lorem ispum",
+  "lorem lorem lorem lorem",
+  "ispum dolor lorem lorem",
+  "ispum dolor lorem lorem",
+  "ispum dolor lorem lorem",
+  "ispum dolor lorem lorem",
 ];
 const servicesFour = [
-  "orem lorem lorem lorem ispum",
-  "spum dolor lorem lorem ispum",
-  "spum dolor lorem lorem ispum",
-  "spum dolor lorem lorem ispum",
-  "spum dolor lorem lorem ispum",
+  "orem lorem lorem lorem",
+  "spum dolor lorem lorem",
+  "spum dolor lorem lorem",
+  "spum dolor lorem lorem",
+  "spum dolor lorem lorem",
 ];
 
 const openModalOne = function () {
