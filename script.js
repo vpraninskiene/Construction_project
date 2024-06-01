@@ -53,23 +53,23 @@ const cards = [
     text: "Patikimumas",
   },
   {
-    img: "./img/svg/flex.svg",
+    img: "../img/svg/flex.svg",
     text: "Lankstumas",
   },
   {
-    img: "./img/svg/experience.svg",
+    img: "../img/svg/experience.svg",
     text: "Patirtis",
   },
   {
-    img: "./img/svg/quality.svg",
+    img: "../img/svg/quality.svg",
     text: "Kokybė",
   },
   {
-    img: "./img/svg/glass.svg",
+    img: "../img/svg/glass.svg",
     text: "Kruopštumas",
   },
   {
-    img: "./img/svg/price.svg",
+    img: "../img/svg/price.svg",
     text: "Prieinamumas",
   },
 ];
