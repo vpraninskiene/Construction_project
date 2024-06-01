@@ -49,7 +49,7 @@ for (let i = 0; i < navLinks.length; ++i) {
 
 const cards = [
   {
-    img: "/img/svg/safety.svg",
+    img: "./img/svg/safety.svg",
     text: "Patikimumas",
   },
   {
