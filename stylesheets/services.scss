@@ -4,7 +4,7 @@
   background-color: $color-dark-blue;
   color: $color-white-mustard;
   position: relative;
-  padding: 10px 0;
+  padding: 60px 0;
 
   .services-container {
     @include flex-column;
@@ -12,12 +12,12 @@
 
   h2 {
     font-size: 25px;
-    padding-bottom: 20px;
+    padding: 30px;
   }
 
   .all-services {
     @include flex-column;
-    font-size: 20px;
+    font-size: $font-size-1-dot-1-rem;
     gap: 30px;
 
     .service-item {
@@ -58,7 +58,7 @@
         padding-bottom: 20px;
         width: 90%;
         margin: auto;
-        font-size: $font-size-1-dot-2-rem;
+        font-size: $font-size-1-dot-1-rem;
       }
       .services-btn {
         margin: auto;
@@ -70,7 +70,7 @@
         display: block;
         border: 2px solid $color-white-mustard;
         background-color: $color-dark-blue;
-
+        font-size: $font-size-1-dot-1-rem;
         cursor: pointer;
       }
 
@@ -81,23 +81,22 @@
   }
 
   .modal {
-    position: absolute;
     color: $color-white-mustard;
     background-color: $color-mustard;
     text-align: right;
     position: fixed;
     width: 70vw;
-    height: 50vh;
+    height: 40vh;
     top: 150px;
     z-index: 4;
-    border-radius: 80% 40% 60% 0% / 100% 0% 90% 40%;
+    padding: 20px;
   }
 
   .modal-content {
     @include flex-column;
     width: 350px;
     height: 250px;
-    font-size: $font-size-1-dot-2-rem;
+    font-size: $font-size-1-dot-1-rem;
     margin: auto;
     padding-top: 20px;
 
@@ -107,7 +106,7 @@
 
     .close-modal-btn {
       padding: 10px;
-      font-size: $font-size-1-dot-2-rem;
+      font-size: $font-size-1-dot-1-rem;
       background-color: $color-mustard;
       color: $color-white-mustard;
       border: 2px solid $color-white-mustard;
@@ -141,13 +140,16 @@
     }
     .modal {
       top: 250px;
-      width: 40%;
+      width: 60%;
     }
 
     .modal-content {
       width: 500px;
-      height: 350px;
+      height: 250px;
     }
+  }
+  .services-btn {
+    font-size: $font-size-1-dot-2-rem;
   }
 }
 
@@ -176,10 +178,12 @@
     .modal {
       top: 250px;
       width: 40%;
+      height: 400px;
 
       .modal-content {
         width: 500px;
-        height: 350px;
+        height: 300px;
+        font-size: $font-size-1-dot-2-rem;
       }
     }
   }

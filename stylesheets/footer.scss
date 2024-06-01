@@ -14,12 +14,12 @@
   }
 
   form {
-    width: 50vw;
+    width: 70vw;
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
-    font-size: $font-size-1-dot-2-rem;
+    font-size: $font-size-1-dot-1-rem;
 
     label {
       color: $color-white-mustard;
@@ -42,7 +42,7 @@
       border: none;
       background-color: $color-mustard;
       color: $color-white-mustard;
-      font-size: $font-size-1-dot-2-rem;
+      font-size: $font-size-1-dot-1-rem;
 
       .submit-btn:active {
         transform: scale(0.95);
@@ -61,4 +61,16 @@
   padding: 10px;
   color: $color-white-mustard;
   text-align: center;
+}
+
+@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  #form {
+    width: 60%;
+  }
+}
+
+@media (min-width: #{$desktop-width}) {
+  #form {
+    width: 40%;
+  }
 }
