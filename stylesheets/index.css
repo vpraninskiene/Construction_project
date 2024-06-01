@@ -361,7 +361,7 @@ main .hero-text p {
   display: flex;
   flex-direction: column;
   text-align: center;
-  font-size: 16px;
+  font-size: 1.1rem;
   padding: 0 20px 20px 20px;
 }
 .about .about-description .about-text h2 {
@@ -478,7 +478,7 @@ main .hero-text p {
   background-color: rgb(35, 34, 48);
   color: #f4eee3;
   position: relative;
-  padding: 10px 0;
+  padding: 60px 0;
 }
 .services .services-container {
   display: flex;
@@ -488,14 +488,14 @@ main .hero-text p {
 }
 .services h2 {
   font-size: 25px;
-  padding-bottom: 20px;
+  padding: 30px;
 }
 .services .all-services {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 1.1rem;
   gap: 30px;
 }
 .services .all-services .service-item {
@@ -536,7 +536,7 @@ main .hero-text p {
   padding-bottom: 20px;
   width: 90%;
   margin: auto;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .services .all-services .services-text .services-btn {
   margin: auto;
@@ -548,22 +548,22 @@ main .hero-text p {
   display: block;
   border: 2px solid #f4eee3;
   background-color: rgb(35, 34, 48);
+  font-size: 1.1rem;
   cursor: pointer;
 }
 .services .all-services .services-text .services-btn:active {
   transform: scale(0.95);
 }
 .services .modal {
-  position: absolute;
   color: #f4eee3;
   background-color: #ffb003;
   text-align: right;
   position: fixed;
   width: 70vw;
-  height: 50vh;
+  height: 40vh;
   top: 150px;
   z-index: 4;
-  border-radius: 80% 40% 60% 0%/100% 0% 90% 40%;
+  padding: 20px;
 }
 .services .modal-content {
   display: flex;
@@ -572,7 +572,7 @@ main .hero-text p {
   justify-content: center;
   width: 350px;
   height: 250px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: auto;
   padding-top: 20px;
 }
@@ -581,7 +581,7 @@ main .hero-text p {
 }
 .services .modal-content .close-modal-btn {
   padding: 10px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   background-color: #ffb003;
   color: #f4eee3;
   border: 2px solid #f4eee3;
@@ -613,11 +613,14 @@ main .hero-text p {
   }
   .services .modal {
     top: 250px;
-    width: 40%;
+    width: 60%;
   }
   .services .modal-content {
     width: 500px;
-    height: 350px;
+    height: 250px;
+  }
+  .services-btn {
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 1024px) {
@@ -641,10 +644,12 @@ main .hero-text p {
   .services .modal {
     top: 250px;
     width: 40%;
+    height: 400px;
   }
   .services .modal .modal-content {
     width: 500px;
-    height: 350px;
+    height: 300px;
+    font-size: 1.2rem;
   }
 }
 .gallery {
@@ -776,12 +781,12 @@ main .hero-text p {
   padding: 30px;
 }
 .contact-form form {
-  width: 50vw;
+  width: 70vw;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .contact-form form label {
   color: #f4eee3;
@@ -801,7 +806,7 @@ main .hero-text p {
   border: none;
   background-color: #ffb003;
   color: #f4eee3;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .contact-form form .submit-btn .submit-btn:active {
   transform: scale(0.95);
@@ -816,6 +821,17 @@ main .hero-text p {
   padding: 10px;
   color: #f4eee3;
   text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #form {
+    width: 60%;
+  }
+}
+@media (min-width: 1024px) {
+  #form {
+    width: 40%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
