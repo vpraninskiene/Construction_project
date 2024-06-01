@@ -513,22 +513,22 @@ main .hero-text p {
   overflow: hidden;
 }
 .services .all-services #img-1 {
-  background: url("/img/jpg/service-1.jpg");
+  background: url("../img/jpg/service-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .services .all-services #img-2 {
-  background: url("/img/jpg/service-2.jpg");
+  background: url("../img/jpg/service-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .services .all-services #img-3 {
-  background: url("/img/jpg/service-3.jpg");
+  background: url("../img/jpg/service-3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .services .all-services #img-4 {
-  background: url("/img/jpg/services-4.jpg");
+  background: url("../img/jpg/services-4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }

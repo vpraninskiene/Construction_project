@@ -34,22 +34,22 @@
     }
 
     #img-1 {
-      background: url("/img/jpg/service-1.jpg");
+      background: url("../img/jpg/service-1.jpg");
       @include img-properties;
     }
 
     #img-2 {
-      background: url("/img/jpg/service-2.jpg");
+      background: url("../img/jpg/service-2.jpg");
       @include img-properties;
     }
 
     #img-3 {
-      background: url("/img/jpg/service-3.jpg");
+      background: url("../img/jpg/service-3.jpg");
       @include img-properties;
     }
 
     #img-4 {
-      background: url("/img/jpg/services-4.jpg");
+      background: url("../img/jpg/services-4.jpg");
       @include img-properties;
     }
 
