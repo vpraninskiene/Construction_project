@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+body {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgb(35, 34, 48, 0.7);
+  height: 100%;
+  width: 100vw;
+  z-index: 3;
+}
+
+.stopScroll {
+  overflow: hidden;
+}
+
+.container {
+  @include flex-column;
+  overflow: hidden;
+
+  .hidden {
+    display: none;
+  }
+}

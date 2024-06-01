@@ -1,0 +1,15 @@
+$color-dark-blue: rgb(35, 34, 48);
+$color-orange: #f0542d;
+$color-mustard: #ffb003;
+$color-white-mustard: #f4eee3;
+$gradient: radial-gradient(
+  circle at 50% 50%,
+  rgba(214, 134, 3, 1) 0%,
+  rgba(240, 118, 45, 1) 50%,
+  rgba(214, 134, 3, 1) 100%
+);
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+$font-size-1-dot-2-rem: 1.2rem;

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylesheets/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body">
+    <div id="overlay"></div>
+    <div class="container">
+      <header>
+        <div class="contacts-social">
+          <div class="contacts">
+            <div class="phone">
+              <div class="phone-icon"></div>
+              <p>+37060000000</p>
+            </div>
+            <div class="email">
+              <div class="envelope-icon"></div>
+              <p>statybos.paslaugos@gmail.com</p>
+            </div>
+          </div>
+          <div class="social">
+            <a target="_blank" href="http://facebook.com"
+              ><div class="facebook"></div
+            ></a>
+            <a href="http://linkedin.com" target="_blank"
+              ><div class="linkedin"></div
+            ></a>
+          </div>
+        </div>
+        <nav class="navbar">
+          <button class="navbar_toggle">
+            <span class="menu"
+              ><img src="/img/svg/bars-solid.svg" alt="menu"
+            /></span>
+          </button>
+          <div class="menu-wrapper">
+            <div class="logo"><a href="#hero"><div class="logo-img"></div>
+              <p><span>S</span>TATYBOS <span>P</span>ASLAUGOS</p></a>
+              
+            </div>
+            <div class="menu-list">
+              <li><a class="nav-link" href="#hero">Pradinis</a></li>
+              <li><a class="nav-link" href="#about">Apie mus</a></li>
+              <li><a class="nav-link" href="#services">Paslaugos</a></li>
+              <li><a class="nav-link" href="#gallery">Galerija</a></li>
+              <li><a class="nav-link" href="#contacts">Kontaktai</a></li>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main id="hero" class="hero">
+        <div class="hero-text">
+          <span><h1>Vidaus ir išorės apdailos darbai</h1></span>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit eum?</p>
+        </div>
+      </main>
+      <article id="about" class="about">
+        
+        <div data-aos="fade-up" data-aos-duration="3000" class="about-description">
+          <div class="about-text">
+            <h2>Apie mus</h2>
+            <span>༄</span>
+            MB "Statybos paslaugos" - Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Nihil minus eaque dicta placeat, dolorum vero!
+            <br /><br />
+            Eligendi voluptate possimus, nihil cupiditate doloribus voluptatibus
+            ratione blanditiis nesciunt molestiae neque magni sed, iste
+            consequuntur commodi fugiat beatae magnam. Optio natus omnis quasi
+            laudantium corrupti sequi velit ipsa accusamus similique nam
+            laborum, tempora ab.<br /><br />Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Nulla, libero. Commodi aspernatur
+            provident, tempore et optio suscipit deserunt similique maxime,
+            voluptates velit quas repudiandae nemo. Nisi nesciunt unde obcaecati
+            ea.
+          </div>
+          <div data-aos="fade-up" data-aos-duration="3000" class="about-images">
+            <div class="about-img" id="about-img-1"></div>
+            <div class="about-img" id="about-img-2"></div>
+          </div>
+        </div>
+        <div data-aos="zoom-out" data-aos-duration="3000"  class="cards">
+          <div class="cards-container"></div>
+        </div>
+      </article>
+      <article id="services" class="services">
+        <div class="services-container">
+          <h2 data-aos="fade-up" data-aos-duration="900">Paslaugos</h2>
+          <div class="all-services">
+            <div data-aos="zoom-in" data-aos-duration="3000" class="service-item">
+              <div class="service-img" id="img-1"></div>
+              <div class="services-text">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit tempora</p>
+              <button class="services-btn" id="services-1-btn">Plačiau</button>
+              </div>
+            </div>
+            <div data-aos="zoom-in" data-aos-duration="3000" class="service-item">
+              <div class="service-img" id="img-2"></div>
+              <div class="services-text">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit tempora</p>
+              <button class="services-btn" id="services-2-btn">Plačiau</button>
+              </div>
+            </div>
+            <div data-aos="zoom-in" data-aos-duration="3000" class="service-item">
+              <div class="service-img" id="img-3"></div>
+              <div class="services-text">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit tempora</p>
+              <button class="services-btn" id="services-3-btn">Plačiau</button>
+              </div>
+            </div>
+            <div data-aos="zoom-in" data-aos-duration="3000" class="service-item">
+              <div class="service-img" id="img-4"></div>
+              <div class="services-text">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit tempora</p>
+              <button class="services-btn" id="services-4-btn">Plačiau</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal hidden">
+          <button class="close-modal-btn-x">X</button>
+          <div class="modal-content">
+            <h3>Mes atliekame šios darbus:</h3>
+            <ul class="list"></ul>
+            <button class="close-modal-btn">Uždaryti</button>
+          </div>
+        </div>
+      </article>
+      <article id="gallery" class="gallery">
+        <h2>Atlikti darbai</h2>
+        <div class="gallery-items">
+          <div class="gallery-item">
+            <img src="/img/jpg/gallery-1.jpg" alt="gallery-1" />
+            <div class="description">
+              <p>Namo vidaus rekonstrukcija</p>
+              <p></p>
+              <p>200 kv. m Vilnius</p>
+            </div>
+            <div class="gallery-modal hidden">
+              <button class="gallery-close-modal-btn-x">&#x1F5D9</button>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div id="slide-1" class="swiper-slide"><img src="/img/jpg/gallery-1.jpg" alt="1"></div>
+                    <div id="slide-2" class="swiper-slide"><img src="/img/jpg/gallery-2.jpg" alt="2"></div>
+                    <div id="slide-3" class="swiper-slide"><img src="/img/jpg/gallery-3.jpg" alt="3"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/img/jpg/gallery-2.jpg" alt="gallery-2" />
+            <div class="description">
+              <p>Namo vidaus rekonstrukcija</p>
+              <p></p>
+              <p>200 kv. m Vilnius</p>
+            </div>
+            <div class="gallery-modal hidden">
+              <button class="gallery-close-modal-btn-x">&#x1F5D9</button>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div id="slide-1" class="swiper-slide"><img src="/img/jpg/gallery-2.jpg" alt="1"></div>
+                    <div id="slide-2" class="swiper-slide"><img src="/img/jpg/gallery-3.jpg" alt="2"></div>
+                    <div id="slide-3" class="swiper-slide"><img src="/img/jpg/gallery-4.jpg" alt="3"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/img/jpg/gallery-3.jpg" alt="gallery-3" />
+            <div class="description">
+              <p>Namo vidaus rekonstrukcija</p>
+              <p></p>
+              <p>200 kv. m Vilnius</p>
+            </div>
+            <div class="gallery-modal hidden">
+              <button class="gallery-close-modal-btn-x">&#x1F5D9</button>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div id="slide-1" class="swiper-slide"><img src="/img/jpg/gallery-3.jpg" alt="1"></div>
+                    <div id="slide-2" class="swiper-slide"><img src="/img/jpg/gallery-4.jpg" alt="2"></div>
+                    <div id="slide-3" class="swiper-slide"><img src="/img/jpg/gallery-5.jpg" alt="3"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/img/jpg/gallery-4.jpg" alt="gallery-4" />
+            <div class="description">
+              <p>Namo vidaus rekonstrukcija</p>
+              <p></p>
+              <p>200 kv. m Vilnius</p>
+            </div>
+            <div class="gallery-modal hidden">
+              <button class="gallery-close-modal-btn-x">&#x1F5D9</button>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div id="slide-1" class="swiper-slide"><img src="/img/jpg/gallery-4.jpg" alt="1"></div>
+                    <div id="slide-2" class="swiper-slide"><img src="/img/jpg/gallery-5.jpg" alt="2"></div>
+                    <div id="slide-3" class="swiper-slide"><img src="/img/jpg/gallery-6.jpg" alt="3"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/img/jpg/gallery-5.jpg" alt="gallery-5" />
+            <div class="description">
+              <p>Namo vidaus rekonstrukcija</p>
+              <p></p>
+              <p>200 kv. m Vilnius</p>
+            </div>
+            <div class="gallery-modal hidden">
+              <button class="gallery-close-modal-btn-x">&#x1F5D9</button>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div id="slide-1" class="swiper-slide"><img src="/img/jpg/gallery-5.jpg" alt="1"></div>
+                    <div id="slide-2" class="swiper-slide"><img src="/img/jpg/gallery-6.jpg" alt="2"></div>
+                    <div id="slide-3" class="swiper-slide"><img src="/img/jpg/gallery-7.jpg" alt="3"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/img/jpg/gallery-6.jpg" alt="gallery-6" />
+            <div class="description">
+              <p>Namo vidaus rekonstrukcija</p>
+              <p></p>
+              <p>200 kv. m Vilnius</p>
+            </div>
+            <div class="gallery-modal hidden">
+              <button class="gallery-close-modal-btn-x">&#x1F5D9</button>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div id="slide-1" class="swiper-slide"><img src="/img/jpg/gallery-6.jpg" alt="1"></div>
+                    <div id="slide-2" class="swiper-slide"><img src="/img/jpg/gallery-7.jpg" alt="2"></div>
+                    <div id="slide-3" class="swiper-slide"><img src="/img/jpg/gallery-8.jpg" alt="3"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/img/jpg/gallery-7.jpg" alt="gallery-7" />
+            <div class="description">
+              <p>Namo vidaus rekonstrukcija</p>
+              <p></p>
+              <p>200 kv. m Vilnius</p>
+            </div>
+            <div class="gallery-modal hidden">
+              <button class="gallery-close-modal-btn-x">&#x1F5D9</button>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div id="slide-1" class="swiper-slide"><img src="/img/jpg/gallery-7.jpg" alt="1"></div>
+                    <div id="slide-2" class="swiper-slide"><img src="/img/jpg/gallery-8.jpg" alt="2"></div>
+                    <div id="slide-3" class="swiper-slide"><img src="/img/jpg/gallery-9.jpg" alt="3"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/img/jpg/gallery-8.jpg" alt="gallery-8" />
+            <div class="description">
+              <p>Namo vidaus rekonstrukcija</p>
+              <p></p>
+              <p>200 kv. m Vilnius</p>
+            </div>
+            <div class="gallery-modal hidden">
+              <button class="gallery-close-modal-btn-x">&#x1F5D9</button>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div id="slide-1" class="swiper-slide"><img src="/img/jpg/gallery-1.jpg" alt="1"></div>
+                    <div id="slide-2" class="swiper-slide"><img src="/img/jpg/gallery-2.jpg" alt="2"></div>
+                    <div id="slide-3" class="swiper-slide"><img src="/img/jpg/gallery-3.jpg" alt="3"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="/img/jpg/gallery-9.jpg" alt="gallery-9" />
+            <div class="description">
+              <p>Namo vidaus rekonstrukcija</p>
+              <p></p>
+              <p>200 kv. m Vilnius</p>
+            </div>
+            <div class="gallery-modal hidden">
+              <button class="gallery-close-modal-btn-x">&#x1F5D9</button>
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div id="slide-1" class="swiper-slide"><img src="/img/jpg/gallery-2.jpg" alt="1"></div>
+                    <div id="slide-2" class="swiper-slide"><img src="/img/jpg/gallery-1.jpg" alt="2"></div>
+                    <div id="slide-3" class="swiper-slide"><img src="/img/jpg/gallery-5.jpg" alt="3"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <footer id="contacts" class="contact-form">
+        <h2>Susisiekite su mumis</h2>
+        <form id="form">
+          <label for="name">Jūsų Vardas</label><br />
+          <input type="text" id="name" name="name" />
+          <br />
+          <span class="hidden" id="nameError">Įveskite vardą</span>
+          <br />
+          <label for="phone">Telefonas</label><br />
+          <input type="phone" id="phone" name="phone" />
+          <br />
+          <span class="hidden" id="phoneError">Įveskite telefono numerį</span>
+          <br />
+          <label for="message">Užklausa</label><br />
+          <textarea id="message" name="message"></textarea>
+          <br />
+          <span class="hidden" id="messageError">Įveskite žinutę</span>
+          <br />
+          <button class="submit-btn" type="submit">Siųsti</button>
+        </form>
+      </footer>
+      <div class="reserved"><span>2024©ChiliAle</span></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+    });
+  </script>
+  </body>
+</html>

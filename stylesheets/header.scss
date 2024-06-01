@@ -1,0 +1,277 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+
+  .contacts-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: url(/img/jpg/wall-2.jpg);
+    padding: 10px;
+    gap: 10px;
+
+    .social {
+      display: flex;
+      gap: 5px;
+
+      .facebook {
+        background: url(/img/svg/square-facebook.svg);
+        height: 1.2rem;
+        width: 1.2rem;
+        background-repeat: no-repeat;
+      }
+
+      .linkedin {
+        background: url(/img/svg/linkedin.svg);
+        height: 1.15rem;
+        width: 1.15rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 3px;
+      }
+    }
+
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+
+    .contacts .phone,
+    .contacts .email {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      gap: 5px;
+    }
+
+    .contacts .phone-icon,
+    .envelope-icon {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .contacts .phone-icon {
+      background: url(/img/svg/phone-solid.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .contacts .envelope-icon {
+      background: url(/img/svg//envelope-solid.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  // Menu
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(35, 34, 48, 0.8);
+    text-align: center;
+
+    .logo {
+      display: none;
+
+      a {
+        padding: 0;
+        margin: 0;
+      }
+
+      .logo-img {
+        background: url(/img/svg/bricks_7007773.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+      }
+      p {
+        color: white;
+        margin-top: 10px;
+        font-size: 0.6rem;
+        font-family: "Bruno Ace SC";
+      }
+
+      span {
+        color: $color-orange;
+        font-family: "Bruno Ace SC";
+        margin: 0;
+        font-size: 0.6rem;
+      }
+    }
+  }
+
+  .menu-wrapper {
+    display: none;
+
+    li {
+      font-size: $font-size-1-dot-2-rem;
+      text-align: center;
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: $color-white-mustard;
+      margin: 10px;
+      padding: 5px 0;
+      display: block;
+      text-align: center;
+      position: relative;
+    }
+
+    a:hover {
+      color: $color-mustard;
+    }
+
+    .menu-list {
+      padding-bottom: 15px;
+    }
+  }
+
+  .show_nav {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $color-dark-blue;
+  }
+
+  .navbar_toggle {
+    text-align: center;
+    background-color: $color-dark-blue;
+    border: none;
+    outline: none;
+    padding: 10px;
+  }
+
+  header .menu img {
+    height: 20px;
+    width: 30px;
+  }
+}
+
+@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  header {
+    .contacts-social {
+      flex-direction: row;
+      gap: 20px;
+
+      .contacts {
+        flex-direction: row;
+        gap: 20px;
+      }
+    }
+
+    // menu
+    .navbar_toggle {
+      display: none;
+    }
+
+    .menu-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+
+      .logo {
+        display: block;
+        padding: 10px;
+      }
+
+      .menu-list {
+        padding-bottom: 0;
+        li {
+          display: inline-block;
+
+          a:hover {
+            color: $color-white-mustard;
+          }
+
+          a::before {
+            content: "";
+            position: absolute;
+            background-color: $color-mustard;
+            bottom: 0;
+            left: 0;
+            height: 1.5px;
+            width: 0;
+          }
+
+          a:hover::before {
+            transition: width 0.8s;
+            transition-timing-function: ease;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: #{$desktop-width}) {
+  header {
+    .contacts-social {
+      flex-direction: row;
+      gap: 20px;
+
+      .contacts {
+        flex-direction: row;
+        gap: 20px;
+      }
+    }
+
+    // menu
+    .navbar_toggle {
+      display: none;
+    }
+
+    .menu-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      z-index: 2;
+
+      .logo {
+        display: block;
+        padding: 10px;
+      }
+
+      .menu-list {
+        padding-bottom: 0;
+        li {
+          display: inline-block;
+
+          a:hover {
+            color: $color-white-mustard;
+          }
+
+          a::before {
+            content: "";
+            position: absolute;
+            background-color: $color-mustard;
+            bottom: 0;
+            left: 0;
+            height: 1.5px;
+            width: 0;
+          }
+
+          a:hover::before {
+            transition: width 0.8s;
+            transition-timing-function: ease;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
