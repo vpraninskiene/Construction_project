@@ -568,7 +568,7 @@ main .hero-text p {
   text-align: right;
   position: fixed;
   width: 90vw;
-  height: 40vh;
+  height: 50vh;
   top: 150px;
   z-index: 4;
   padding: 20px;
@@ -721,8 +721,8 @@ main .hero-text p {
   z-index: 4;
 }
 .gallery .gallery-items .gallery-item .gallery-close-modal-btn-x {
-  padding: 5px 10px;
-  margin: 10px;
+  padding: 10px 10px;
+  margin: 20px;
   font-size: 1.2rem;
   background-color: transparent;
   color: #ffb003;
@@ -742,8 +742,8 @@ main .hero-text p {
 }
 .gallery .gallery-items .gallery-item .swiper .swiper-slide img {
   display: block;
-  width: 80%;
-  height: 300px;
+  width: 75%;
+  height: 250px;
   object-fit: cover;
 }
 
