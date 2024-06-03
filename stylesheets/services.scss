@@ -7,12 +7,16 @@
   padding: 60px 0;
 
   .services-container {
-    @include flex-column;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h4 {
+    padding: 20px 0 0 40px;
   }
 
   h2 {
-    font-size: 25px;
-    padding: 30px;
+    padding: 20px 0 20px 40px;
   }
 
   .all-services {
@@ -63,7 +67,7 @@
       .services-btn {
         margin: auto;
         margin-top: 20px;
-        padding: 10px 20px;
+        padding: 15px 30px;
         text-align: center;
         color: $color-white-mustard;
         border-radius: 5px;
@@ -105,7 +109,7 @@
     }
 
     .close-modal-btn {
-      padding: 10px;
+      padding: 15px 30px;
       font-size: $font-size-1-dot-1-rem;
       background-color: $color-mustard;
       color: $color-white-mustard;
@@ -131,8 +135,13 @@
 @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
   .services {
     height: 100vh;
+    h4 {
+      padding: 20px 0 0 10px;
+    }
+
     h2 {
-      padding-bottom: 50px;
+      width: 100%;
+      padding: 20px 0 40px 10px;
     }
     .all-services {
       flex-direction: row;
@@ -157,8 +166,13 @@
   .services {
     height: 100vh;
 
+    h4 {
+      padding: 20px 0 0 15px;
+    }
+
     h2 {
-      padding-bottom: 50px;
+      width: 100%;
+      padding: 20px 0 40px 15px;
     }
     .all-services {
       flex-direction: row;

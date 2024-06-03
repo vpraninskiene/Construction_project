@@ -50,38 +50,37 @@ for (let i = 0; i < navLinks.length; ++i) {
 const cards = [
   {
     img: "./img/svg/safety.svg",
-    text: "Patikimumas",
+    title: "Patikimumas",
+    text: "lorem ispum lorem lorem dolor lorem",
   },
   {
     img: "./img/svg/flex.svg",
-    text: "Lankstumas",
+    title: "Lankstumas",
+    text: "lorem ispum lorem lorem dolor lorem",
   },
   {
     img: "./img/svg/experience.svg",
-    text: "Patirtis",
+    title: "Patirtis",
+    text: "lorem ispum lorem lorem dolor lorem",
   },
   {
     img: "./img/svg/quality.svg",
-    text: "Kokybė",
-  },
-  {
-    img: "./img/svg/glass.svg",
-    text: "Kruopštumas",
-  },
-  {
-    img: "./img/svg/price.svg",
-    text: "Prieinamumas",
+    title: "Kokybė",
+    text: "lorem ispum lorem lorem dolor lorem",
   },
 ];
 
 for (let i = 0; i < cards.length; i++) {
-  const { img, text } = cards[i];
+  const { img, title, text } = cards[i];
   const cardItem = document.createElement("div");
   const cardImgEl = document.createElement("img");
+  const cardTitleEl = document.createElement("h4");
   const cardTextEl = document.createElement("p");
   card.appendChild(cardItem);
   cardItem.appendChild(cardImgEl);
   cardImgEl.src = img;
+  cardItem.appendChild(cardTitleEl);
+  cardTitleEl.textContent = title;
   cardItem.appendChild(cardTextEl);
   cardTextEl.textContent = text;
   cardItem.classList.add("card-style");
