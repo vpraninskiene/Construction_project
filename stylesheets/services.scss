@@ -90,7 +90,6 @@
     text-align: right;
     position: fixed;
     width: 80vw;
-    height: 45vh;
     top: 150px;
     z-index: 4;
     padding: 20px;
@@ -101,7 +100,6 @@
     @include flex-column;
     text-align: center;
     width: 70vw;
-    height: 250px;
     font-size: $font-size-1-dot-1-rem;
     margin: auto;
     padding-top: 20px;
@@ -116,7 +114,7 @@
       background-color: $color-mustard;
       color: $color-white-mustard;
       border: 2px solid $color-white-mustard;
-      margin-top: 40px;
+      margin: 40px 0;
       border-radius: 5px;
     }
 
@@ -167,8 +165,7 @@
     }
 
     .modal-content {
-      width: 500px;
-      height: 250px;
+      width: 400px;
     }
   }
   .services-btn {
@@ -206,11 +203,10 @@
     .modal {
       top: 250px;
       width: 40%;
-      height: 400px;
 
       .modal-content {
         width: 85%;
-        height: 300px;
+
         font-size: $font-size-1-dot-2-rem;
       }
     }
