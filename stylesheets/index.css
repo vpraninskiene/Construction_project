@@ -568,7 +568,6 @@ main .hero-text p {
   text-align: right;
   position: fixed;
   width: 80vw;
-  height: 45vh;
   top: 150px;
   z-index: 4;
   padding: 20px;
@@ -581,7 +580,6 @@ main .hero-text p {
   justify-content: center;
   text-align: center;
   width: 70vw;
-  height: 250px;
   font-size: 1.1rem;
   margin: auto;
   padding-top: 20px;
@@ -595,7 +593,7 @@ main .hero-text p {
   background-color: #ffb003;
   color: #f4eee3;
   border: 2px solid #f4eee3;
-  margin-top: 40px;
+  margin: 40px 0;
   border-radius: 5px;
 }
 .services .modal-content .close-modal-btn:active {
@@ -640,8 +638,7 @@ main .hero-text p {
     width: 60%;
   }
   .services .modal-content {
-    width: 500px;
-    height: 250px;
+    width: 400px;
   }
   .services-btn {
     font-size: 1.2rem;
@@ -672,11 +669,9 @@ main .hero-text p {
   .services .modal {
     top: 250px;
     width: 40%;
-    height: 400px;
   }
   .services .modal .modal-content {
     width: 85%;
-    height: 300px;
     font-size: 1.2rem;
   }
 }
