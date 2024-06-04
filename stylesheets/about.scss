@@ -51,9 +51,7 @@
 
   .about-img {
     background: url(../img/jpg/about.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    @include img-properties;
     width: 90%;
     height: 200px;
     border-radius: 50% 0% 50% 0%;

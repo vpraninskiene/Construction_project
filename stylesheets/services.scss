@@ -89,16 +89,18 @@
     background-color: $color-mustard;
     text-align: right;
     position: fixed;
-    width: 90vw;
-    height: 50vh;
+    width: 80vw;
+    height: 45vh;
     top: 150px;
     z-index: 4;
     padding: 20px;
+    border-radius: 15%;
   }
 
   .modal-content {
     @include flex-column;
-    width: 350px;
+    text-align: center;
+    width: 70vw;
     height: 250px;
     font-size: $font-size-1-dot-1-rem;
     margin: auto;
@@ -129,6 +131,18 @@
     background-color: $color-mustard;
     color: $color-white-mustard;
     border-radius: 20px;
+
+    .modal {
+      top: 250px;
+      width: 40%;
+      height: 400px;
+
+      .modal-content {
+        width: 85%;
+        height: 300px;
+        font-size: $font-size-1-dot-2-rem;
+      }
+    }
   }
 }
 
@@ -195,7 +209,7 @@
       height: 400px;
 
       .modal-content {
-        width: 500px;
+        width: 85%;
         height: 300px;
         font-size: $font-size-1-dot-2-rem;
       }
