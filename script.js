@@ -1,14 +1,6 @@
 const docBody = document.getElementsByTagName("body")[0];
 const navToggle = document.querySelector(".navbar_toggle");
 const navLinks = document.querySelectorAll(".nav-link");
-const aboutLink = document.querySelector("#about-link");
-const aboutSection = document.querySelector("#about");
-const servicesLink = document.querySelector("#services-link");
-const servicesSection = document.querySelector("#services");
-const galleryLink = document.querySelector("#gallery-link");
-const gallerySection = document.querySelector("#gallery");
-const contactsLink = document.querySelector("#contacts-link");
-const contactsSection = document.querySelector("#contacts");
 const links = document.querySelector(".menu-wrapper");
 const card = document.querySelector(".cards-container");
 
@@ -53,22 +45,16 @@ for (let i = 0; i < navLinks.length; ++i) {
   });
 }
 
-aboutLink.addEventListener("click", function () {
-  aboutSection.getBoundingClientRect();
-  aboutSection.scrollIntoView({ behavior: "smooth" });
+//scroll
+
+links.addEventListener("click", function (e) {
+  e.preventDefault();
+  if (e.target.classList.contains("nav-link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
 });
-servicesLink.addEventListener("click", function () {
-  servicesSection.getBoundingClientRect();
-  services.scrollIntoView({ behavior: "smooth" });
-});
-galleryLink.addEventListener("click", function () {
-  gallerySection.getBoundingClientRect();
-  gallerySection.scrollIntoView({ behavior: "smooth" });
-});
-contactsLink.addEventListener("click", function () {
-  contactsSection.getBoundingClientRect();
-  contactsSection.scrollIntoView({ behavior: "smooth" });
-});
+
 // cards
 
 const cards = [
