@@ -4,6 +4,8 @@ const navLinks = document.querySelectorAll(".nav-link");
 const links = document.querySelector(".menu-wrapper");
 const card = document.querySelector(".cards-container");
 
+const servicesButtons = document.querySelectorAll(".services-btn");
+
 const servicesBtnOne = document.querySelector("#services-1-btn");
 const servicesBtnTwo = document.querySelector("#services-2-btn");
 const servicesBtnTree = document.querySelector("#services-3-btn");
@@ -17,7 +19,7 @@ const list = document.querySelector(".list");
 const showDescription = document.querySelectorAll(".description");
 const galleryModal = document.querySelectorAll(".gallery-modal");
 const galleryCloseModalBtnX = document.querySelectorAll(
-  ".gallery-close-modal-btn-x"
+  ".gallery-close-modal-btn-x",
 );
 const swiperSlider1 = document.querySelector("#slide-1");
 const swiperSlider2 = document.querySelector("#slide-2");
@@ -30,6 +32,37 @@ const inputMessage = document.querySelector("#message");
 const nameError = document.querySelector("#nameError");
 const phoneError = document.querySelector("#phoneError");
 const messageError = document.querySelector("#messageError");
+
+// Function to remove all AOS animations on mobile
+function disableAOSOnMobile() {
+  const mobileWidth = 768; //
+  if (window.innerWidth <= mobileWidth) {
+    document.querySelectorAll("[data-aos]").forEach((el) => {
+      el.removeAttribute("data-aos");
+    });
+  }
+}
+
+function initAOSDesktop() {
+  const mobileWidth = 600;
+  if (window.innerWidth > mobileWidth) {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }
+}
+window.addEventListener("DOMContentLoaded", () => {
+  disableAOSOnMobile();
+  initAOSDesktop();
+});
+
+window.addEventListener("resize", () => {
+  disableAOSOnMobile();
+  if (window.innerWidth > 600) {
+    AOS.refreshHard(); // re-evaluate AOS elements
+  }
+});
 
 // menu
 
@@ -98,82 +131,69 @@ for (let i = 0; i < cards.length; i++) {
 
 // services modal
 
-const servicesOne = [
-  "lorem ispum dolor lorem",
-  "lorem ispum dolor lorem",
-  "lorem ispum dolor lorem",
-  "lorem ispum dolor lorem",
-  "lorem ispum dolor lorem",
+const servicesList = [
+  {
+    id: 1,
+    services: [
+      "ispum dolor lorem",
+      "lorem ispum dolor ",
+      "lo ispu dolor lorem ipsum",
+      "lorem ispum dolor lorem",
+    ],
+  },
+  {
+    id: 2,
+    services: [
+      "ispum dolor lorem",
+      "lorem ispum dolor ",
+      "lo ispu dolor lorem ipsum",
+      "lorem ispum dolor lorem",
+    ],
+  },
+  {
+    id: 3,
+    services: [
+      "ispum dolor lorem",
+      "lorem ispum dolor ",
+      "lo ispu dolor lorem ipsum",
+      "lorem ispum dolor lorem",
+    ],
+  },
+  {
+    id: 4,
+    services: [
+      "ispum dolor lorem",
+      "lorem ispum dolor ",
+      "lo ispu dolor lorem ipsum",
+      "lorem ispum dolor lorem",
+    ],
+  },
 ];
 
-const servicesTwo = [
-  "dolor lorem lorem lorem",
-  "ispum dolor lorem lorem",
-  "ispum dolor lorem lorem",
-  "ispum dolor lorem lorem",
-  "ispum dolor lorem lorem",
-];
-const servicesThree = [
-  "lorem lorem lorem lorem",
-  "ispum dolor lorem lorem",
-  "ispum dolor lorem lorem",
-  "ispum dolor lorem lorem",
-  "ispum dolor lorem lorem",
-];
-const servicesFour = [
-  "orem lorem lorem lorem",
-  "spum dolor lorem lorem",
-  "spum dolor lorem lorem",
-  "spum dolor lorem lorem",
-  "spum dolor lorem lorem",
-];
+const openModal = function (id) {
+  list.innerHTML = ""; // clear previous items
 
-const openModalOne = function () {
-  for (i in servicesOne) {
-    const ulEl = document.createElement("li");
-    list.appendChild(ulEl);
-    ulEl.innerHTML = servicesOne[i];
-    modal.classList.remove("hidden");
-    containerOverlay.classList.add("overlay");
-    docBody.classList.add("stopScroll");
-  }
+  const selectedService = servicesList.find(
+    (service) => service.id === Number(id),
+  );
+
+  selectedService.services.forEach((text) => {
+    const li = document.createElement("li");
+    li.textContent = text;
+    list.appendChild(li);
+  });
+
+  modal.classList.remove("hidden");
+  containerOverlay.classList.add("overlay");
+  docBody.classList.add("stopScroll");
 };
 
-const openModalTwo = function () {
-  for (i in servicesTwo) {
-    const ulEl = document.createElement("li");
-    list.appendChild(ulEl);
-    ulEl.innerHTML = servicesTwo[i];
-    modal.classList.remove("hidden");
-    containerOverlay.classList.add("overlay");
-    docBody.classList.add("stopScroll");
-  }
-};
-const openModalTree = function () {
-  for (i in servicesThree) {
-    const ulEl = document.createElement("li");
-    list.appendChild(ulEl);
-    ulEl.innerHTML = servicesThree[i];
-    modal.classList.remove("hidden");
-    containerOverlay.classList.add("overlay");
-    docBody.classList.add("stopScroll");
-  }
-};
-const openModalFour = function () {
-  for (i in servicesFour) {
-    const ulEl = document.createElement("li");
-    list.appendChild(ulEl);
-    ulEl.innerHTML = servicesFour[i];
-    modal.classList.remove("hidden");
-    containerOverlay.classList.add("overlay");
-    docBody.classList.add("stopScroll");
-  }
-};
-
-servicesBtnOne.addEventListener("click", openModalOne);
-servicesBtnTwo.addEventListener("click", openModalTwo);
-servicesBtnTree.addEventListener("click", openModalTree);
-servicesBtnFour.addEventListener("click", openModalFour);
+servicesButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const id = this.dataset.id;
+    openModal(id);
+  });
+});
 
 const closeServicesModal = function () {
   modal.classList.add("hidden");

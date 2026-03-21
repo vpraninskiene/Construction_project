@@ -1,97 +1,62 @@
+@use "variables";
+@use "mixins";
 .about {
-  @include flex-column;
+  @include mixins.flex-column;
   width: 100%;
-  padding: 40px 0;
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(214, 134, 3, 1) 0%,
-    rgba(240, 118, 45, 1) 50%,
-    rgba(214, 134, 3, 1) 100%
-  );
-
+  height: 100vh;
+  gap: 0;
   .about-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
+    @include mixins.flex-column;
+    height: 70vh;
+    line-height: 25px;
+    text-align: center;
     font-size: 16px;
     padding: 20px;
-    gap: 20px;
-    color: $color-white-mustard;
-    gap: 20px;
+    color: variables.$color-dark-blue;
+    gap: 10px;
 
-    .about-text-cards {
-      width: 100%;
-      .about-text-card {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-        padding: 20px 0;
-        width: 100%;
-        gap: 15px;
-
-        .about-text-card-img {
-          width: 60px;
-          height: 60px;
-          img {
-            border: 2px solid $color-white-mustard;
-            border-radius: 50%;
-            padding: 10px;
-          }
-        }
-
-        .about-text-card-text {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          text-align: left;
-        }
-      }
+    h2 {
+      padding-bottom: 30px;
     }
   }
 
   .about-img {
-    background: url(../img/jpg/about.jpg);
-    @include img-properties;
-    width: 90%;
-    height: 200px;
-    border-radius: 50% 0% 50% 0%;
+    background: url(../img/png/house.png);
+    @include mixins.img-properties;
+    height: 30vh;
+    width: 100%;
   }
 }
 
-@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+@media (min-width: #{variables.$tablet-width}) and (max-width: #{variables.$desktop-width - 1px}) {
   // about
 
   .about {
+    flex-direction: row;
+
     .about-text {
-      margin: auto;
       width: 90%;
       padding: 40px 10px;
+    }
+    .about-img {
+      height: 600px;
+      width: 70vw;
     }
   }
 }
 
-@media (min-width: #{$desktop-width}) {
+@media (min-width: #{variables.$desktop-width}) {
   .about {
     flex-direction: row;
-    h2 {
-      padding-bottom: 30px;
-    }
 
     .about-text {
-      flex-direction: column;
-      font-size: $font-size-1-dot-2-rem;
+      font-size: variables.$font-size-1-dot-2-rem;
       width: 80vw;
-      .about-text-cards {
-        display: flex;
-        gap: 20px;
-      }
     }
 
     .about-img {
-      width: 60%;
-      height: 500px;
-      border-radius: 50% 0% 50% 0%;
-      margin-right: 20px;
+      height: 600px;
+      width: 70vw;
     }
   }
 }

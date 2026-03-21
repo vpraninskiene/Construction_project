@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="shortcut icon" href="/img/svg/bricks_7007773.png">
+    <title>Statybos paslaugos</title>
+    <meta name="description" content="Vidaus ir išorės apdailos darbai">
     <link rel="stylesheet" href="./stylesheets/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +14,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="script.js" defer></script>
   </head>
-  <body">
+  <body>
     <div id="overlay"></div>
     <div class="container">
       <header>
@@ -58,38 +60,58 @@
         </nav>
       </header>
       <main id="hero" class="hero">
-        <img src="./img/jpg/img-1.jpg" alt="hero">
-        <div class="hero-text">
-          <span><h1>Vidaus ir išorės apdailos darbai</h1></span>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit eum?</p>
+        <div class="hero-content">
+          <div class="hero-text">
+            <span><h1>Vidaus ir išorės apdailos darbai</h1></span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit eum?</p>
+          </div>
         </div>
       </main>
-      <article id="about" class="cards">
-          <div class="cards-container"></div>
-      </article>
-      <article class="about">
+      <article class="about" id="about">
           <div data-aos="fade-up" data-aos-duration="2000" class="about-text">
             <h4>Apie mus</h4>
-            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
-           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus perferendis facilis distinctio cum rerum. Quos voluptatum necessitatibus quia qui maiores numquam veritatis possimus, deserunt cupiditate.</p>
-           <div class="about-text-cards">
-            <div class="about-text-card">
-              <div class="about-text-card-img"><img src="./img/svg/puzzle-svgrepo-com.svg" alt="puzzle"></div>
-             <div class="about-text-card-text">
-              <h3>Profesionalus sprendimai</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-             </div> 
-            </div>
-            <div class="about-text-card">
-              <div class="about-text-card-img"><img src="./img/svg/tree-svgrepo-com.svg" alt="tree"></div>
-              <div class="about-text-card-text">
-                <h3>Atsakyngas požiūris</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-               </div> 
-            </div>
-           </div>
+            <h2>Lorem ipsum dolor sit amet </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus perferendis facilis distinctio cum rerum. Quos voluptatum necessitatibus quia qui maiores numquam veritatis possimus, deserunt cupiditate.</p>
+            <p>Necessitatibus perferendis facilis distinctio cum rerum. Voluptatum necessitatibus quia qui maiores numquam veritatis possimus, deserunt cupiditate.</p>
           </div>
             <div data-aos="fade-up" data-aos-duration="2000" class="about-img"></div>
+      </article>
+      <article class="team" id="team">
+          <div data-aos="fade-up" data-aos-duration="2000" class="team-text">
+            <h4>Komanda</h4>
+            <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+            <p> Necessitatibus perferendis facilis distinctio cum rerum. Quos voluptatum necessitatibus quia qui maiores numquam veritatis possimus, deserunt cupiditate.</p>
+          </div>
+          <div class="team-members">
+            <div data-aos="fade-up" data-aos-duration="2000" class="member-card">
+              <div class="member-img" id="member-1"></div>
+              <div class="member-text">
+                <h3>Donatas</h3>
+                <span><i>Direktorius</i></span>
+                <p>Necessitatibus perferendis facilis distinctio cum rerum.</p>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="2000"class="member-card">
+                <div class="member-img" id="member-2"></div>
+                <div class="member-text">
+                  <h3>Aleksandra</h3>
+                  <span><i>Projektų vadybininkė</i></span>
+                  <p>Necessitatibus perferendis facilis distinctio cum rerum.</p>
+                </div>
+              </div>
+            <div data-aos="fade-up" data-aos-duration="2000" class="member-card">
+                <div class="member-img" id="member-3"></div>
+                <div class="member-text">
+                  <h3>Adrianas</h3>
+                  <span><i>Darbų vadovas</i></span>
+                  <p>Necessitatibus perferendis facilis distinctio cum rerum.</p>
+                </div>
+              </div>
+          </div>
+            <div data-aos="fade-up" data-aos-duration="2000" class="about-img"></div>
+      </article>
+       <article class="cards">
+          <div class="cards-container"></div>
       </article>
       <article id="services" class="services">
         <div class="services-container">
@@ -100,39 +122,36 @@
               <div class="service-img" id="img-1"></div>
               <div class="services-text">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit tempora</p>
-              <button class="services-btn" id="services-1-btn">Plačiau</button>
+              <button class="services-btn" data-id="1">Plačiau</button>
               </div>
             </div>
             <div data-aos="zoom-in" data-aos-duration="2000" class="service-item">
               <div class="service-img" id="img-2"></div>
               <div class="services-text">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit tempora</p>
-              <button class="services-btn" id="services-2-btn">Plačiau</button>
+              <button class="services-btn" data-id="2">Plačiau</button>
               </div>
             </div>
             <div data-aos="zoom-in" data-aos-duration="2000" class="service-item">
               <div class="service-img" id="img-3"></div>
               <div class="services-text">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit tempora</p>
-              <button class="services-btn" id="services-3-btn">Plačiau</button>
+              <button class="services-btn" data-id="3">Plačiau</button>
               </div>
             </div>
-            <div data-aos="zoom-in" data-aos-duration="2000" class="service-item">
-              <div class="service-img" id="img-4"></div>
-              <div class="services-text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit tempora</p>
-              <button class="services-btn" id="services-4-btn">Plačiau</button>
-              </div>
-            </div>
+            
           </div>
         </div>
         <div class="modal hidden">
+         <div class="border">
           <button class="close-modal-btn-x">X</button>
           <div class="modal-content">
-            <h3>Mes atliekame šios darbus:</h3>
+            <h3>Mūsų paslaugos</h3>
             <ul class="list"></ul>
-            <button class="close-modal-btn">Uždaryti</button>
           </div>
+          <div class="close-modal-btn-container"><button class="close-modal-btn">⇐ Atgal</button></div>
+         </div>
+          
         </div>
       </article>
       <article id="gallery" class="gallery">

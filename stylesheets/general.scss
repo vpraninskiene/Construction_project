@@ -1,12 +1,19 @@
+@use "mixins";
+@use "variables";
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Montserrat";
   cursor: default;
 }
 
 body {
   position: relative;
+  width: 100%;
+
+  background-color: variables.$color-white-mustard;
 }
 
 .overlay {
@@ -22,7 +29,11 @@ body {
 }
 
 .container {
-  @include flex-column;
+  max-width: 1200px; /* maximum width for large screens */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px; /* horizontal padding for small screens */
+  padding-right: 20px;
   overflow: hidden;
 
   .hidden {

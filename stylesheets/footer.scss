@@ -1,9 +1,11 @@
+@use "variables";
+@use "mixins";
 footer {
   width: 100%;
-  @include flex-column;
-  background-color: $color-dark-blue;
+  @include mixins.flex-column;
+  background-color: variables.$color-dark-blue;
   padding: 50px 0 20px 0;
-  color: $color-white-mustard;
+  color: variables.$color-white-mustard;
 
   .contacts {
     display: flex;
@@ -34,10 +36,10 @@ footer {
         justify-content: center;
         font-size: 16px;
         width: 100%;
-        background-color: $color-dark-blue;
+        background-color: variables.$color-dark-blue;
 
         label {
-          color: $color-white-mustard;
+          color: variables.$color-white-mustard;
         }
 
         input {
@@ -55,10 +57,10 @@ footer {
           margin: auto;
           padding: 15px 30px;
           border-radius: 5px;
-          border: 2px solid $color-mustard;
-          background-color: $color-dark-blue;
-          color: $color-mustard;
-          font-size: $font-size-1-dot-1-rem;
+          border: 2px solid variables.$color-mustard;
+          background-color: variables.$color-mustard;
+          color: variables.$color-white-mustard;
+          font-size: variables.$font-size-1-dot-1-rem;
 
           .submit-btn:active {
             transform: scale(0.95);
@@ -75,12 +77,12 @@ footer {
 }
 .reserved {
   width: 100vw;
-  background-color: $color-mustard;
+  background-color: variables.$color-mustard;
   padding: 10px;
-  color: $color-white-mustard;
+  color: variables.$color-white-mustard;
   text-align: center;
 }
-@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+@media (min-width: #{variables.$tablet-width}) and (max-width: #{variables.$desktop-width - 1px}) {
   footer {
     .contacts {
       flex-direction: row;
@@ -96,7 +98,7 @@ footer {
   }
 }
 
-@media (min-width: #{$desktop-width}) {
+@media (min-width: #{variables.$desktop-width}) {
   footer {
     .contacts {
       flex-direction: row;

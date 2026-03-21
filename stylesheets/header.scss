@@ -1,7 +1,10 @@
+@use "variables";
+
 header {
   width: 100%;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 2;
 
   .contacts-social {
@@ -9,7 +12,7 @@ header {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: $color-mustard;
+    background-color: variables.$color-mustard;
     padding: 10px;
     gap: 10px;
 
@@ -101,7 +104,7 @@ header {
       }
 
       span {
-        color: $color-orange;
+        color: variables.$color-orange;
         font-family: "Bruno Ace SC";
         margin: 0;
         font-size: 0.6rem;
@@ -113,14 +116,14 @@ header {
     display: none;
 
     li {
-      font-size: $font-size-1-dot-2-rem;
+      font-size: variables.$font-size-1-dot-2-rem;
       text-align: center;
       list-style: none;
     }
 
     a {
       text-decoration: none;
-      color: $color-white-mustard;
+      color: variables.$color-white-mustard;
       margin: 10px;
       padding: 5px 0;
       display: block;
@@ -130,7 +133,7 @@ header {
     }
 
     a:hover {
-      color: $color-mustard;
+      color: variables.$color-mustard;
     }
 
     .menu-list {
@@ -143,12 +146,12 @@ header {
     width: 100vw;
     flex-direction: column;
     justify-content: center;
-    background-color: $color-dark-blue;
+    background-color: variables.$color-dark-blue;
   }
 
   .navbar_toggle {
     text-align: center;
-    background-color: $color-dark-blue;
+    background-color: variables.$color-dark-blue;
     border: none;
     outline: none;
     padding: 10px;
@@ -160,7 +163,7 @@ header {
   }
 }
 
-@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+@media (min-width: #{variables.$tablet-width}) and (max-width: #{variables.$desktop-width - 1px}) {
   header {
     .contacts-social {
       flex-direction: row;
@@ -194,13 +197,13 @@ header {
           display: inline-block;
 
           a:hover {
-            color: $color-white-mustard;
+            color: variables.$color-white-mustard;
           }
 
           a::before {
             content: "";
             position: absolute;
-            background-color: $color-mustard;
+            background-color: variables.$color-mustard;
             bottom: 0;
             left: 0;
             height: 1.5px;
@@ -218,7 +221,7 @@ header {
   }
 }
 
-@media (min-width: #{$desktop-width}) {
+@media (min-width: #{variables.$desktop-width}) {
   header {
     .contacts-social {
       flex-direction: row;
@@ -253,13 +256,13 @@ header {
           display: inline-block;
 
           a:hover {
-            color: $color-white-mustard;
+            color: variables.$color-white-mustard;
           }
 
           a::before {
             content: "";
             position: absolute;
-            background-color: $color-mustard;
+            background-color: variables.$color-mustard;
             bottom: 0;
             left: 0;
             height: 1.5px;
