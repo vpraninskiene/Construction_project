@@ -1,8 +1,10 @@
+@use "mixins";
+@use "variables";
 .services {
   width: 100%;
-  @include flex-column;
-  background-color: $color-dark-blue;
-  color: $color-white-mustard;
+  @include mixins.flex-column;
+  background-color: variables.$color-dark-blue;
+  color: variables.$color-white-mustard;
   position: relative;
   padding: 60px 0;
 
@@ -20,12 +22,12 @@
   }
 
   .all-services {
-    @include flex-column;
-    font-size: $font-size-1-dot-1-rem;
+    @include mixins.flex-column;
+    font-size: variables.$font-size-1-dot-1-rem;
     gap: 30px;
 
     .service-item {
-      @include flex-column;
+      @include mixins.flex-column;
       gap: 25px;
       text-align: center;
       width: 90%;
@@ -39,22 +41,22 @@
 
     #img-1 {
       background: url("../img/jpg/service-1.jpg");
-      @include img-properties;
+      @include mixins.img-properties;
     }
 
     #img-2 {
       background: url("../img/jpg/service-2.jpg");
-      @include img-properties;
+      @include mixins.img-properties;
     }
 
     #img-3 {
       background: url("../img/jpg/service-3.jpg");
-      @include img-properties;
+      @include mixins.img-properties;
     }
 
     #img-4 {
       background: url("../img/jpg/services-4.jpg");
-      @include img-properties;
+      @include mixins.img-properties;
     }
 
     .services-text {
@@ -62,19 +64,19 @@
         padding-bottom: 20px;
         width: 90%;
         margin: auto;
-        font-size: $font-size-1-dot-1-rem;
+        font-size: variables.$font-size-1-dot-1-rem;
       }
       .services-btn {
         margin: auto;
         margin-top: 20px;
         padding: 15px 30px;
         text-align: center;
-        color: $color-white-mustard;
+        color: variables.$color-white-mustard;
         border-radius: 5px;
+        border: 2px solid variables.$color-mustard;
         display: block;
-        border: 2px solid $color-white-mustard;
-        background-color: $color-dark-blue;
-        font-size: $font-size-1-dot-1-rem;
+        background: variables.$color-mustard;
+        font-size: variables.$font-size-1-dot-1-rem;
         cursor: pointer;
       }
 
@@ -85,67 +87,69 @@
   }
 
   .modal {
-    color: $color-white-mustard;
-    background-color: $color-mustard;
+    color: variables.$color-dark-blue;
+    background-color: variables.$color-white-mustard;
     text-align: right;
     position: fixed;
     width: 80vw;
-    height: 60%;
     top: 150px;
     z-index: 4;
-    padding: 20px;
-    border-radius: 15%;
+    padding: 15px;
+    border-radius: 5%;
+
+    .border {
+      width: 95%;
+      margin: auto;
+      border-radius: 5% 25%;
+      border: 3px solid variables.$color-dark-blue;
+    }
   }
 
   .modal-content {
-    @include flex-column;
-    text-align: center;
-    width: 70vw;
-    font-size: $font-size-1-dot-1-rem;
+    @include mixins.flex-column;
+    text-align: left;
+    line-height: 35px;
+    width: 100%;
     margin: auto;
-    padding-top: 20px;
+    font-size: variables.$font-size-1-dot-1-rem;
+    padding-top: 10px;
 
     h3 {
       padding-bottom: 30px;
+      text-align: center;
     }
-
+  }
+  .close-modal-btn-container {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
     .close-modal-btn {
-      padding: 15px 30px;
-      font-size: $font-size-1-dot-1-rem;
-      background-color: $color-mustard;
-      color: $color-white-mustard;
-      border: 2px solid $color-white-mustard;
-      margin: 40px 0;
+      padding: 10px;
+      font-size: variables.$font-size-1-dot-1-rem;
+      background-color: variables.$color-dark-blue;
+      color: variables.$color-white-mustard;
+      border: 2px;
+      margin-top: 40px;
+      margin-bottom: 10px;
       border-radius: 5px;
     }
+  }
 
-    .close-modal-btn:active {
-      transform: scale(0.95);
-    }
+  .close-modal-btn:active {
+    transform: scale(0.95);
   }
   .close-modal-btn-x {
     border: none;
-    padding: 20px;
-    font-size: $font-size-1-dot-2-rem;
-    background-color: $color-mustard;
-    color: $color-white-mustard;
+    font-size: variables.$font-size-1-dot-2-rem;
+    font-weight: bold;
+    background-color: variables.$color-white-mustard;
+    color: variables.$color-dark-blue;
     border-radius: 20px;
-
-    .modal {
-      top: 250px;
-      width: 40%;
-      height: 400px;
-
-      .modal-content {
-        width: 85%;
-        height: 300px;
-        font-size: $font-size-1-dot-2-rem;
-      }
-    }
   }
 }
 
-@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+@media (min-width: #{variables.$tablet-width}) and (max-width: #{variables.$desktop-width - 1px}) {
   .services {
     height: 100vh;
     h4 {
@@ -162,19 +166,15 @@
     }
     .modal {
       top: 250px;
-      width: 60%;
-    }
-
-    .modal-content {
-      width: 400px;
+      width: 50vw;
     }
   }
   .services-btn {
-    font-size: $font-size-1-dot-2-rem;
+    font-size: variables.$font-size-1-dot-2-rem;
   }
 }
 
-@media (min-width: #{$desktop-width}) {
+@media (min-width: #{variables.$desktop-width}) {
   .services {
     height: 100vh;
 
@@ -198,17 +198,15 @@
       }
 
       .services-btn {
-        font-size: $font-size-1-dot-2-rem;
+        font-size: variables.$font-size-1-dot-2-rem;
+        margin-top: 40px;
       }
     }
     .modal {
-      top: 250px;
-      width: 40%;
-
+      top: 200px;
+      width: 40vw;
       .modal-content {
-        width: 85%;
-
-        font-size: $font-size-1-dot-2-rem;
+        font-size: variables.$font-size-1-dot-2-rem;
       }
     }
   }

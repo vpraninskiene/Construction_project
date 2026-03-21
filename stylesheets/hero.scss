@@ -1,66 +1,81 @@
-main {
-  position: relative;
-  @include flex-column;
+@use "variables";
+@use "mixins";
+.hero {
   width: 100%;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  img {
+  &::before {
+    content: "";
     position: absolute;
-    object-fit: cover;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    background-image: url("../img/webp/hero.webp");
+    background-size: cover;
+    background-position: center;
     z-index: -1;
   }
 
-  .hero-text {
-    background: rgba(35, 34, 48, 0.5);
-    padding: 80px;
-    text-align: center;
+  .hero-content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 
-    span {
-      display: block;
-      animation: reveal 1.8s ease 0.5s;
-      h1 {
-        color: $color-white-mustard;
-        line-height: 1;
-        padding-bottom: 10px;
-      }
+    .hero-text {
+      background: rgba(35, 34, 48, 0.5);
+      padding: 80px 20px;
+      text-align: center;
+      width: 100%;
     }
+  }
 
-    p {
-      color: $color-white-mustard;
-      animation: reveal 1.8s ease 0.5s;
-      overflow: hidden;
+  span {
+    display: block;
+    animation: reveal 1.8s ease 0.5s;
+    h1 {
+      color: variables.$color-white-mustard;
       line-height: 1;
+      padding-bottom: 10px;
+    }
+  }
+
+  p {
+    color: variables.$color-white-mustard;
+    animation: reveal 1.8s ease 0.5s;
+    overflow: hidden;
+    line-height: 1;
+  }
+
+  @keyframes reveal {
+    0% {
+      transform: translate(0, 100%);
+      opacity: 0.1;
     }
 
-    @keyframes reveal {
-      0% {
-        transform: translate(0, 100%);
-        opacity: 0.1;
-      }
+    25% {
+      opacity: 0.25;
+    }
 
-      25% {
-        opacity: 0.25;
-      }
+    50% {
+      opacity: 0.5;
+    }
 
-      50% {
-        opacity: 0.5;
-      }
+    75% {
+      opacity: 0.75;
+    }
 
-      75% {
-        opacity: 0.75;
-      }
-
-      100% {
-        transform: translate(0, 0);
-        opacity: 1;
-      }
+    100% {
+      transform: translate(0, 0);
+      opacity: 1;
     }
   }
 }
 
-@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+@media (min-width: #{variables.$tablet-width}) and (max-width: #{variables.$desktop-width - 1px}) {
   .hero-text {
     h1 {
       font-size: 3rem;
@@ -72,7 +87,7 @@ main {
   }
 }
 
-@media (min-width: #{$desktop-width}) {
+@media (min-width: #{variables.$desktop-width}) {
   .hero-text {
     h1 {
       font-size: 4rem;

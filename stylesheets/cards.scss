@@ -1,3 +1,5 @@
+@use "variables";
+@use "mixins";
 .cards {
   width: 100%;
 
@@ -11,21 +13,21 @@
 
     .card-style {
       place-self: center;
-      @include flex-column;
+      @include mixins.flex-column;
       width: 100%;
       height: 150px;
       font-size: 15px;
-      border-bottom: 1.5px solid $color-white-mustard;
+      border-bottom: 1.5px solid variables.$color-white-mustard;
       gap: 10px;
       img {
-        background-color: $color-mustard;
+        background-color: variables.$color-mustard;
         padding: 10px;
         border-radius: 50%;
       }
     }
   }
 }
-@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+@media (min-width: #{variables.$tablet-width}) and (max-width: #{variables.$desktop-width - 1px}) {
   .cards {
     .cards-container {
       padding: 30px 0;
@@ -33,16 +35,16 @@
       gap: 30px;
 
       .card-style {
-        font-size: $font-size-1-dot-2-rem;
+        font-size: variables.$font-size-1-dot-2-rem;
         border-bottom: none;
-        border-left: 2px solid $color-white-mustard;
-        border-right: 2px solid $color-white-mustard;
+        border-left: 2px solid variables.$color-white-mustard;
+        border-right: 2px solid variables.$color-white-mustard;
       }
     }
   }
 }
 
-@media (min-width: #{$desktop-width}) {
+@media (min-width: #{variables.$desktop-width}) {
   .cards {
     .cards-container {
       padding: 30px 0;
@@ -50,10 +52,10 @@
       gap: 30px;
 
       .card-style {
-        font-size: $font-size-1-dot-2-rem;
+        font-size: variables.$font-size-1-dot-2-rem;
         border-bottom: none;
-        border-left: 2px solid $color-white-mustard;
-        border-right: 2px solid $color-white-mustard;
+        border-left: 2px solid variables.$color-white-mustard;
+        border-right: 2px solid variables.$color-white-mustard;
       }
     }
   }

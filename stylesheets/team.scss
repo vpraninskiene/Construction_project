@@ -1,0 +1,119 @@
+@use "variables";
+@use "mixins";
+
+.team {
+  @include mixins.flex-column;
+  padding-top: 50px;
+
+  .team-text {
+    @include mixins.flex-column;
+    line-height: 25px;
+    text-align: center;
+    font-size: 16px;
+    padding: 20px;
+    color: variables.$color-dark-blue;
+    gap: 10px;
+
+    h2 {
+      padding-bottom: 30px;
+    }
+  }
+
+  .team-members {
+    @include mixins.flex-column;
+    padding-top: 240px;
+    gap: 150px;
+
+    .member-card {
+      position: relative;
+      width: 90%;
+      height: 350px;
+      margin: 20px;
+      .member-text {
+        background-color: variables.$color-mustard;
+      }
+
+      .member-text {
+        @include mixins.flex-column;
+        text-align: center;
+        height: 350px;
+        width: 350px;
+        line-height: 25px;
+        font-size: 16px;
+        padding: 20px;
+        color: variables.$color-dark-blue;
+        gap: 10px;
+      }
+    }
+  }
+
+  #member-1 {
+    position: absolute;
+    top: -160px;
+    left: 55px;
+
+    background: url(../img/png/member_1.png);
+    @include mixins.img-properties;
+    height: 250px;
+    width: 250px;
+  }
+  #member-2 {
+    position: absolute;
+    top: -160px;
+    left: 55px;
+    background: url(../img/png/member_2.png);
+    @include mixins.img-properties;
+    height: 250px;
+    width: 250px;
+  }
+  #member-3 {
+    position: absolute;
+    top: -160px;
+    left: 55px;
+    background: url(../img/png/member_3.png);
+    @include mixins.img-properties;
+    height: 250px;
+    width: 250px;
+  }
+}
+
+@media (min-width: #{variables.$tablet-width}) and (max-width: #{variables.$desktop-width - 1px}) {
+  .team {
+    display: flex;
+    padding-top: 20px;
+
+    .team-members {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0;
+      padding-top: 50px;
+    }
+    .member-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      #member-1,
+      #member-2,
+      #member-3 {
+        position: unset;
+      }
+    }
+
+    .member-card:nth-child(2) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+@media (min-width: #{variables.$desktop-width}) {
+  .team {
+    display: flex;
+    .team-members {
+      display: flex;
+      flex-direction: row;
+      gap: 0;
+    }
+  }
+}
