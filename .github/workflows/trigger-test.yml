@@ -1,0 +1,17 @@
+name: Trigger Playwright Tests
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Playwright repo
+        run: |
+          curl -X POST https://api.github.com/repos/vpraninskiene/playwright-construction-project-run/dispatches \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}" \
+          -d '{"event_type":"run-tests"}'
