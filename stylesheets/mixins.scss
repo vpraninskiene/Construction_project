@@ -1,3 +1,11 @@
+@mixin container-properties {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+}
 @mixin flex-column {
   display: flex;
   flex-direction: column;

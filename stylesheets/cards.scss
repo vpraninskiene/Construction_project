@@ -1,7 +1,7 @@
 @use "variables";
 @use "mixins";
 .cards {
-  width: 100%;
+  @include mixins.container-properties;
 
   .cards-container {
     width: 100%;
@@ -23,6 +23,9 @@
         background-color: variables.$color-mustard;
         padding: 10px;
         border-radius: 50%;
+      }
+      p {
+        font-size: 16px;
       }
     }
   }
@@ -47,12 +50,11 @@
 @media (min-width: #{variables.$desktop-width}) {
   .cards {
     .cards-container {
-      padding: 30px 0;
+      padding: 0 30px 30px 0;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 30px;
 
       .card-style {
-        font-size: variables.$font-size-1-dot-2-rem;
         border-bottom: none;
         border-left: 2px solid variables.$color-white-mustard;
         border-right: 2px solid variables.$color-white-mustard;

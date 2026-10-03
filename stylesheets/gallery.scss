@@ -1,13 +1,17 @@
 @use "variables";
 @use "mixins";
 .gallery {
+  width: 100%;
   position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  margin: 80px 0 20px 0;
-
+  @include mixins.container-properties;
+  padding-top: 60px;
+  text-align: center;
   h4 {
-    padding: 20px 0 0 10px;
+    padding: 20px 0 0 20px;
   }
 
   h2 {
@@ -120,8 +124,6 @@
 
 @media (min-width: #{variables.$desktop-width}) {
   .gallery {
-    margin: 60px 0;
-
     h4 {
       padding: 20px 0 0 40px;
     }

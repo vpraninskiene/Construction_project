@@ -2,9 +2,9 @@
 @use "mixins";
 .about {
   @include mixins.flex-column;
-  width: 100%;
+  @include mixins.container-properties;
+  padding-top: 60px;
   height: 100vh;
-  gap: 0;
   .about-text {
     @include mixins.flex-column;
     height: 70vh;
