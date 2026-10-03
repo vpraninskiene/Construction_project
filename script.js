@@ -14,7 +14,7 @@ const modal = document.querySelector(".modal");
 const modalCloseBtn = document.querySelector(".close-modal-btn");
 const closeModalBtnX = document.querySelector(".close-modal-btn-x");
 const containerOverlay = document.querySelector("#overlay");
-const list = document.querySelector(".list");
+const modalText = document.querySelector(".modal-text");
 
 const showDescription = document.querySelectorAll(".description");
 const galleryModal = document.querySelectorAll(".gallery-modal");
@@ -94,22 +94,22 @@ const cards = [
   {
     img: "./img/svg/safety.svg",
     title: "Patikimumas",
-    text: "lorem ispum lorem lorem dolor lorem",
+    text: "Lorem ispum et dolor lorem",
   },
   {
     img: "./img/svg/flex.svg",
     title: "Lankstumas",
-    text: "lorem ispum lorem lorem dolor lorem",
+    text: "Lorem ispum et dolor lorem",
   },
   {
     img: "./img/svg/experience.svg",
     title: "Patirtis",
-    text: "lorem ispum lorem lorem dolor lorem",
+    text: "Lorem ispum et dolor lorem",
   },
   {
     img: "./img/svg/quality.svg",
     title: "Kokybė",
-    text: "lorem ispum lorem lorem dolor lorem",
+    text: "Lorem ispum et dolor lorem",
   },
 ];
 
@@ -135,52 +135,43 @@ const servicesList = [
   {
     id: 1,
     services: [
-      "ispum dolor lorem",
-      "lorem ispum dolor ",
-      "lo ispu dolor lorem ipsum",
-      "lorem ispum dolor lorem",
+      "Ispum dolor lorem.",
+      "Lorem ispum dolor. ",
+      "To ispu dolor lorem ipsum.",
+      "Lorem ispum dolor lorem.",
     ],
   },
   {
     id: 2,
     services: [
-      "ispum dolor lorem",
-      "lorem ispum dolor ",
-      "lo ispu dolor lorem ipsum",
-      "lorem ispum dolor lorem",
+      "Ispum dolor lorem.",
+      "Lorem ispum dolor.",
+      "To ispu dolor lorem ipsum.",
+      "Lorem ispum dolor lorem.",
     ],
   },
   {
     id: 3,
     services: [
-      "ispum dolor lorem",
-      "lorem ispum dolor ",
-      "lo ispu dolor lorem ipsum",
-      "lorem ispum dolor lorem",
-    ],
-  },
-  {
-    id: 4,
-    services: [
-      "ispum dolor lorem",
-      "lorem ispum dolor ",
-      "lo ispu dolor lorem ipsum",
-      "lorem ispum dolor lorem",
+      "Ispum dolor lorem.",
+      "Lorem ispum dolor.",
+      "To ispu dolor lorem ipsum.",
+      "Lorem ispum dolor lorem.",
     ],
   },
 ];
 
 const openModal = function (id) {
-  list.innerHTML = ""; // clear previous items
+  modalText.innerHTML = ""; // clear previous items
 
   const selectedService = servicesList.find(
     (service) => service.id === Number(id),
   );
 
   selectedService.services.forEach((text) => {
-    const li = document.createElement("li");
-    li.textContent = text;
-    list.appendChild(li);
+    const p = document.createElement("p");
+    p.textContent = text;
+    modalText.appendChild(p);
   });
 
   modal.classList.remove("hidden");
@@ -201,7 +192,7 @@ const closeServicesModal = function () {
   docBody.classList.remove("stopScroll");
   modal.classList.remove("modal-position-2");
   modal.classList.remove("modal-position-3");
-  list.textContent = "";
+  modalText.textContent = "";
 };
 
 modalCloseBtn.addEventListener("click", closeServicesModal);

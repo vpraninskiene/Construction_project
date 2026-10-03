@@ -256,23 +256,7 @@ header {
           display: inline-block;
 
           a:hover {
-            color: variables.$color-white-mustard;
-          }
-
-          a::before {
-            content: "";
-            position: absolute;
-            background-color: variables.$color-mustard;
-            bottom: 0;
-            left: 0;
-            height: 1.5px;
-            width: 0;
-          }
-
-          a:hover::before {
-            transition: width 0.8s;
-            transition-timing-function: ease;
-            width: 100%;
+            color: variables.$color-mustard;
           }
         }
       }

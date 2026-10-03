@@ -52,6 +52,7 @@
             <div class="menu-list">
               <li><a class="nav-link" href="#hero">Pradinis</a></li>
               <li><a class="nav-link" href="#about" >Apie mus</a></li>
+              <li><a class="nav-link" href="#team" >Komanda</a></li>
               <li><a class="nav-link" href="#services">Paslaugos</a></li>
               <li><a class="nav-link" href="#gallery">Atlikti darbai</a></li>
               <li><a class="nav-link" href="#contacts">Kontaktai</a></li>
@@ -60,10 +61,16 @@
         </nav>
       </header>
       <main id="hero" class="hero">
+        <div class="hero-overlay">iiiiii</div>
         <div class="hero-content">
           <div class="hero-text">
-            <span><h1>Vidaus ir išorės apdailos darbai</h1></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit eum?</p>
+            <span>Vidaus ir Išorės</span>
+            <h1>Apdailos Darbai</h1>
+            <p>Kokybė nuo pirmo žingsnio. Profesionaliai atliekame vidaus ir išorės apdailos darbus</p>
+            <div class="hero-buttons">
+              <button class="btn primary">Atlikti darbai</button>
+              <button class="btn secondary">Susisiekime</button>
+            </div>
           </div>
         </div>
       </main>
@@ -84,59 +91,79 @@
           </div>
           <div class="team-members">
             <div data-aos="fade-up" data-aos-duration="2000" class="member-card">
+              <div class="member-frame-top"></div>
+              <div class="member-frame-bottom"></div>
               <div class="member-img" id="member-1"></div>
               <div class="member-text">
                 <h3>Donatas</h3>
                 <span><i>Direktorius</i></span>
                 <p>Necessitatibus perferendis facilis distinctio cum rerum.</p>
+                <div class="member-social">
+                <a href="http://linkedin.com" target="_blank"><div class="linkedin"></div></a>
+                <a target="_blank" href="mailto:your@email.com"><div class="email"></div></a>
+              </div>
               </div>
             </div>
             <div data-aos="fade-up" data-aos-duration="2000"class="member-card">
+              <div class="member-frame-top"></div>
+              <div class="member-frame-bottom"></div>
                 <div class="member-img" id="member-2"></div>
                 <div class="member-text">
                   <h3>Aleksandra</h3>
                   <span><i>Projektų vadybininkė</i></span>
                   <p>Necessitatibus perferendis facilis distinctio cum rerum.</p>
+                  <div class="member-social">
+                <a href="http://linkedin.com" target="_blank"><div class="linkedin"></div></a>
+                <a target="_blank" href="mailto:your@email.com"><div class="email"></div></a>
+              </div>
                 </div>
+                
               </div>
             <div data-aos="fade-up" data-aos-duration="2000" class="member-card">
+              <div class="member-frame-top"></div>
+              <div class="member-frame-bottom"></div>
                 <div class="member-img" id="member-3"></div>
                 <div class="member-text">
                   <h3>Adrianas</h3>
                   <span><i>Darbų vadovas</i></span>
                   <p>Necessitatibus perferendis facilis distinctio cum rerum.</p>
+                  <div class="member-social">
+                <a href="http://linkedin.com" target="_blank"><div class="linkedin"></div></a>
+                <a target="_blank" href="mailto:your@email.com"><div class="email"></div></a>
+              </div>
                 </div>
+                
               </div>
           </div>
             <div data-aos="fade-up" data-aos-duration="2000" class="about-img"></div>
       </article>
-       <article class="cards">
+       <article data-aos="fade-up" data-aos-duration="2000" class="cards">
           <div class="cards-container"></div>
       </article>
       <article id="services" class="services">
         <div class="services-container">
           <h4 data-aos="fade-up" data-aos-duration="2000">Paslaugos</h4>
-          <h2 data-aos="fade-up" data-aos-duration="2000">Lorem ipsum dolor sit amet consectetur adipisicing elit</h2>
+          <h2 data-aos="fade-up" data-aos-duration="2000">Lorem ipsum dolor et adipisicing elit</h2>
           <div class="all-services">
             <div data-aos="zoom-in" data-aos-duration="2000" class="service-item">
               <div class="service-img" id="img-1"></div>
               <div class="services-text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit tempora</p>
-              <button class="services-btn" data-id="1">Plačiau</button>
+                <p>Lorem, ipsum dolor sit amet adipisicing elit tempora</p>
+              <button class="btn services-btn" data-id="1">Plačiau</button>
               </div>
             </div>
             <div data-aos="zoom-in" data-aos-duration="2000" class="service-item">
               <div class="service-img" id="img-2"></div>
               <div class="services-text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit tempora</p>
-              <button class="services-btn" data-id="2">Plačiau</button>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing</p>
+              <button class="btn services-btn" data-id="2">Plačiau</button>
               </div>
             </div>
             <div data-aos="zoom-in" data-aos-duration="2000" class="service-item">
               <div class="service-img" id="img-3"></div>
               <div class="services-text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit tempora</p>
-              <button class="services-btn" data-id="3">Plačiau</button>
+                <p>Lorem, ipsum dolor sit sit amet  adipisicing elit tempora</p>
+              <button class="btn services-btn" data-id="3">Plačiau</button>
               </div>
             </div>
             
@@ -147,7 +174,7 @@
           <button class="close-modal-btn-x">X</button>
           <div class="modal-content">
             <h3>Mūsų paslaugos</h3>
-            <ul class="list"></ul>
+            <div class="modal-text"></div>
           </div>
           <div class="close-modal-btn-container"><button class="close-modal-btn">⇐ Atgal</button></div>
          </div>
@@ -156,7 +183,7 @@
       </article>
       <article id="gallery" class="gallery">
         <h4 data-aos="fade-up" data-aos-duration="2000">Atlikti darbai</h4>
-        <h2 data-aos="fade-up" data-aos-duration="2000">Lorem ipsum dolor sit amet consec tetur adipisicing elit</h2>
+        <h2 data-aos="fade-up" data-aos-duration="2000">Lorem ipsum dolor sit amet consec</h2>
         <div class="gallery-items">
           <div class="gallery-item">
             <img src="./img/jpg/gallery-1.jpg" alt="gallery-1" />
@@ -394,12 +421,12 @@
                 <br />
                 <span class="hidden" id="messageError">Įveskite žinutę</span>
                 <br />
-                <button class="submit-btn" type="submit">Siųsti</button>
+                <button class="btn" id="submit-btn" type="submit">Siųsti</button>
               </form>
             </div>
           </div>
       </footer>
-      <div class="reserved"><span>2024©ChiliAle</span></div>
+      <div class="reserved"><span>2025©TinaProjects</span></div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
